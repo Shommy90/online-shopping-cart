@@ -26,27 +26,27 @@ function Cart(props) {
           <th />
           <th />
         </tr>
-
-        <tbody>
-          {sort(props.cart).map(item => (
-            <tr>
-              <td>{item.name}</td>
-              <td>{item.quantity}</td>
-              <td>
-                <button onClick={e => props.addToCart(item)}>+</button>
-              </td>
-              <td>
-                <button onClick={e => props.removeFromCart(item)}>-</button>
-              </td>
-              <td>
-                <button onClick={() => props.removeAllFromCart(item)}>
-                  Remove all from cart
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
       </thead>
+
+      <tbody>
+        {sort(props.cart).map(item => (
+          <tr>
+            <td>{item.name}</td>
+            <td>{item.quantity}</td>
+            <td>
+              <button onClick={e => props.addToCart(item)}>+</button>
+            </td>
+            <td>
+              <button onClick={e => props.removeFromCart(item)}>-</button>
+            </td>
+            <td>
+              <button onClick={() => props.removeAllFromCart(item)}>
+                Remove all from cart
+              </button>
+            </td>
+          </tr>
+        ))}
+      </tbody>
     </table>
   );
 }
