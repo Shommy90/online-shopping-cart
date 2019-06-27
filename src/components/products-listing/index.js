@@ -1,7 +1,7 @@
 import React from "react";
 import ProductListItem from "./product-list-item";
 import { connect } from "react-redux";
-import { cartItemsWithQuantity } from "../cart";
+// import { cartItemsWithQuantity } from "../cart";
 
 function ProductListing(props) {
   console.log(props);
